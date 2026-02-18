@@ -1,0 +1,94 @@
+*
+{
+  padding:0;
+  margin:0;
+  font-family:sans-serif;
+}
+body {
+    font-size: 100%;
+    font-family: "Arial", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('sky.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(50%); /* Darkens the image */
+    z-index: -1;
+}
+  
+.container {
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Adjust for responsiveness */
+}
+.container span
+{
+  
+  text-transform:uppercase;
+  display:block;
+}
+.text1
+{
+  color:white;
+  font-size:60px;
+  font-weight:700;
+  letter-spacing:7px;
+  margin-bottom:20px;
+  background:rgba(0, 0, 0, 0);
+  position:relative;
+  animation:text 3s 1;
+}
+.text2
+{
+  font-size:30px;
+  color:#eef1ed;
+}
+.text3 button {
+    background-color: #D32D41;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.text3 button:hover {
+    background-color: #a12533;
+}
+@keyframes text{
+  0%{
+    color:black;
+    margin-bottom:-40px;
+  }
+  30%{
+    letter-spacing:25px;
+    margin-bottom:-40px;
+  }
+  85%{
+    letter-spacing:7px;
+    margin-bottom:-40px;
+  }
+  100%{
+    letter-spacing:8px;
+    margin-bottom:-30px;
+  }
+}
